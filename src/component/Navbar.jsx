@@ -11,7 +11,8 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-sm text-[#150B2BB3] font-normal text-base dropdown-content mt-3 z-[1] lg:p-2 shadow bg-base-100 rounded-box w-52">
                         <NavLink to='/' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Home</button></li></NavLink>
                         <NavLink to='/bookdetails/0' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Listed Books</button></li></NavLink>
-                        <li><button>Pages to Read</button></li>
+                        <NavLink to='/chart' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Pages to Read</button></li></NavLink>
+                        
                         </ul>
 
                     </div>
@@ -21,7 +22,8 @@ const Navbar = () => {
                     <ul className="flex gap-11 text-[#150B2BB3] font-semibold text-base">
                         <NavLink to='/' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Home</button></li></NavLink>
                         <NavLink to='/bookdetails/0' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Listed Books</button></li></NavLink>
-                        <li><button>Pages to Read</button></li>
+                        <NavLink to='/chart' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Pages to Read</button></li></NavLink>
+                        
                     </ul>
                 </div>
                 <div className="gap-1">

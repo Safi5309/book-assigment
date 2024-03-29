@@ -105,7 +105,7 @@ const BookDetails = () => {
                   <div className="flex gap-3 mt-4">
                     <p className="bg-[#328EFF26] text-[#328EFF] text-base font-normal py-3 px-5 rounded-full">Category: <span>{book.category}</span></p>
                     <p className="bg-[#FFAC3326] text-[#FFAC33] text-base font-normal py-3 px-5 rounded-full">Rating: <span>{book.rating}</span></p>
-                    <Link to={`/${book.bookId}`}>
+                    <Link to={`/book/${book.bookId}`}>
                       <button className="btn bg-[#23BE0A] text-[#FFFFFF] text-base font-normal rounded-full">View Details</button></Link>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ const BookDetails = () => {
                   <div className="flex gap-3 mt-4">
                     <p className="bg-[#328EFF26] text-[#328EFF] text-base font-normal py-3 px-5 rounded-full">Category: <span>{book.category}</span></p>
                     <p className="bg-[#FFAC3326] text-[#FFAC33] text-base font-normal py-3 px-5 rounded-full">Rating: <span>{book.rating}</span></p>
-                    <Link to={`/${book.bookId}`}>
+                    <Link to={`/book/${book.bookId}`}>
                       <button className="btn bg-[#23BE0A] text-[#FFFFFF] text-base font-normal rounded-full">View Details</button></Link>
 
                   </div>

@@ -1,26 +1,10 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import data from "../Data/Data"
 const OneBookDetails = () => {
-    const { id } = useParams(); 
-    const [data , setData]= useState([]);
-   useEffect(() => {
-    const fetchData = async () => {
-        try {
-            const response = await fetch('data.json');
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            const data = await response.json();
-            setData(data);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
-
-    fetchData();
-}, []);
+    const {id} = useParams();
+    console.log(id);
     const book = data?.find(item => item.bookId === parseInt(id));
 
     const handleReadClick = () => {
@@ -36,7 +20,7 @@ const OneBookDetails = () => {
             toast.warning("This book is already in your Read List");
         }
     };
-    
+
     const handleWishlistClick = () => {
         // Get the array of wishlisted books from local storage
         let wishlistedBooks = JSON.parse(localStorage.getItem('wish')) || [];
@@ -70,9 +54,14 @@ const OneBookDetails = () => {
                             <p className="py-6 text-base text-[#131313B3] font-normal"><span className="text-[#131313] font-bold">Review: </span>{book?.review}</p>
                             <div className="flex gap-3">
                                 <p className="text-[#131313] text-base font-bold py-2 px-4"><span>Tag</span></p>
-                                <p className="text-[#23BE0A] text-base font-medium bg-[#23BE0A0D] rounded-full py-2 px-4"><span>{book?.tags[0]}</span></p>
-                                <p className="text-[#23BE0A] text-base font-medium bg-[#23BE0A0D] rounded-full py-2 px-4"><span>{book?.tags[1]}</span></p>
+                                {book?.tags && book.tags.length >= 1 && (
+                                    <p className="text-[#23BE0A] text-base font-medium bg-[#23BE0A0D] rounded-full py-2 px-4"><span>{book.tags[0]}</span></p>
+                                )}
+                                {book?.tags && book.tags.length >= 2 && (
+                                    <p className="text-[#23BE0A] text-base font-medium bg-[#23BE0A0D] rounded-full py-2 px-4"><span>{book.tags[1]}</span></p>
+                                )}
                             </div>
+
                             <hr className="border border-1 border-[#13131326] mt-5"></hr>
                             <div className="mt-6 flex gap-16">
                                 <div className="">

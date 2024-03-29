@@ -20,6 +20,7 @@ const Book = () => {
 
     fetchData();
 }, []);
+console.log(data);
 
     return (
         <div>
@@ -29,7 +30,7 @@ const Book = () => {
                     <div className="grid lg:grid-cols-3 grid-cols-1 gap-6">
                         {data?.map((item, index) => (
                             <div className="p-6 border border-1 rounded-2xl" key={index}>
-                                <Link to={`/${item.bookId}`} key={index}>
+                                <Link to={`/book/${item.bookId}`} key={index}>
                                     <div className="bg-[#F3F3F3] p-10 mb-6 rounded-2xl">
                                         <img className="mx-auto" src={item.image} alt="" />
                                     </div>

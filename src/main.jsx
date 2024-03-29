@@ -9,6 +9,8 @@ import MainLayouts from './layouts/MainLayouts.jsx'
 import OneBookDetails from './Pages/OneBookDetails.jsx'
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import Chart from './Pages/Chart.jsx'
+import NotFoundPage from './Pages/NotFoundPage.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -25,19 +27,21 @@ const router = createBrowserRouter([
         element: <BookDetails></BookDetails>
       },
       {
-        path: '/:id',
-        loader: () => fetch('data.json'),
+        path: '/book/:id',
         element: <OneBookDetails />
       },
       {
-        path: '/:id',
-        loader: () => fetch('data.json'),
-        element: <OneBookDetails />
+        path: '/chart',
+        element: <Chart/>
       }
 
        
     ]
   },
+  {
+    path:'*',
+    element:<NotFoundPage/>
+  }
 
 ])
 

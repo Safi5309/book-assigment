@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     "bookId": 1,
     "bookName": "The Dating Playbook for Men",
@@ -78,3 +78,5 @@ export const data = [
     "yearOfPublishing": 1951
   }
 ]
+
+export default data ;
