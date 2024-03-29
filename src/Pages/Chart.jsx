@@ -1,11 +1,9 @@
-
+import { useEffect, useState } from "react";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 import { scaleOrdinal } from "d3-scale";
 import { schemeCategory10 } from "d3-scale-chromatic";
 
 const colors = scaleOrdinal(schemeCategory10).range();
-
-const data = JSON.parse(localStorage.getItem('read')) || [];
 
 const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3
@@ -21,7 +19,16 @@ const TriangleBar = (props) => {
 
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
+
 const Chart = () => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        // Update data from localStorage
+        const storedData = JSON.parse(localStorage.getItem('read')) || [];
+        setData(storedData);
+    }, []); // Run this effect only once when the component mounts
+
     return (
         <div>
             <BarChart

@@ -1,5 +1,5 @@
-
-import {useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import data from "../Data/Data"
 const OneBookDetails = () => {
@@ -20,7 +20,6 @@ const OneBookDetails = () => {
             toast.warning("This book is already in your Read List");
         }
     };
-    // dunamic route
 
     const handleWishlistClick = () => {
         // Get the array of wishlisted books from local storage
