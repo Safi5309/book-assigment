@@ -20,6 +20,7 @@ const OneBookDetails = () => {
             toast.warning("This book is already in your Read List");
         }
     };
+    // dunamic route
 
     const handleWishlistClick = () => {
         // Get the array of wishlisted books from local storage
