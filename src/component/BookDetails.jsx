@@ -57,8 +57,8 @@ const BookDetails = () => {
 
   return (
     <div className="mt-9">
-      <div className="min-w-full bg-[#1313130D] text-center py-9 rounded-2xl">
-        <h3 className="text-[#131313] text-3xl font-bold min-w-full">Books</h3>
+      <div className="lg:min-w-full min-w-px bg-[#1313130D]  py-9 rounded-2xl">
+        <h3 className="text-[#131313] flex justify-center items-center text-3xl font-bold min-w-full">Books</h3>
       </div>
       <div className="min-w-full flex justify-center mt-8">
         <select className="select bg-[#23BE0A] text-white text-lg font-semibold border-none" onChange={handleChange}>
@@ -117,8 +117,8 @@ const BookDetails = () => {
           <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
             {sortedWish?.map((book) => (
               <div key={book.bookId} className="min-w-full border border-1 border-[#13131326] rounded-2xl flex gap-6 flex-col">
-                <div className="bg-[#1313130D]   m-6 rounded-2xl">
-                  <img className="m-12" src={book.image} alt={book.bookName} />
+                <div className="bg-[#1313130D] m-6 rounded-2xl">
+                  <img className="lg:m-12 m-6 mx-auto" src={book.image} alt={book.bookName} />
                 </div>
                 <div className="m-6">
                   <p className="text-[#131313] font-bold text-2xl ">{book.bookName}</p>
