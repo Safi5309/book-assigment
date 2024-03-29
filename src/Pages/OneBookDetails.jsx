@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+
+import {useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import data from "../Data/Data"
 const OneBookDetails = () => {
