@@ -11,6 +11,8 @@ import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import Chart from './Pages/Chart.jsx'
 import NotFoundPage from './Pages/NotFoundPage.jsx'
+import BookCover from './Pages/BookCover.jsx'
+import Contact from './Pages/Contact.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
         path: '/chart',
         element: <Chart/>
       },
+      {
+        path: '/bookCover',
+        element: <BookCover/>
+      },
+      {
+        path:'/contact',
+        element:<Contact/>
+      }
       
 
        
