@@ -33,7 +33,8 @@ const router = createBrowserRouter([
       {
         path: '/chart',
         element: <Chart/>
-      }
+      },
+      
 
        
     ]
