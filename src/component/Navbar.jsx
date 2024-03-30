@@ -12,7 +12,7 @@ const Navbar = () => {
                         <NavLink to='/' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Home</button></li></NavLink>
                         <NavLink to='/bookdetails/0' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Listed Books</button></li></NavLink>
                         <NavLink to='/chart' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Pages to Read</button></li></NavLink>
-                        <NavLink to='/bookCover' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Book Cover</button></li></NavLink>
+                        <NavLink to='/bookCover' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Authors</button></li></NavLink>
                         <NavLink to='/contact' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Contact</button></li></NavLink>
                         
                         </ul>
@@ -25,7 +25,7 @@ const Navbar = () => {
                         <NavLink to='/' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Home</button></li></NavLink>
                         <NavLink to='/bookdetails/0' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Listed Books</button></li></NavLink>
                         <NavLink to='/chart' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Pages to Read</button></li></NavLink>
-                        <NavLink to='/bookCover' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Book Cover</button></li></NavLink>
+                        <NavLink to='/bookCover' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Authors</button></li></NavLink>
                         <NavLink to='/contact' className={({isActive}) => isActive? 'text-[#23BE0A]' : 'font-bold'}> <li><button>Contact</button></li></NavLink>
 
                     </ul>
