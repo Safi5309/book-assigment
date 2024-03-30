@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { CiStar } from 'react-icons/ci';
-import { Link } from 'react-router-dom';
+ import { Link } from 'react-router-dom';
 
 const BookCover = () => {
     const [data, setData] = useState([]);
