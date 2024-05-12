@@ -116,7 +116,7 @@ const BookDetails = () => {
           <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Wishlist Books" onClick={() => { setChecked(false) }} />
           <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
             {sortedWish?.map((book) => (
-              <div key={book.bookId} className="min-w-full border border-1 border-[#13131326] rounded-2xl flex gap-6 flex-col">
+              <div key={book.bookId} className="min-w-full border border-1 border-[#13131326] rounded-2xl flex gap-6 flex-col lg:flex-row">
                 <div className="bg-[#1313130D] m-6 rounded-2xl">
                   <img className="lg:m-12 m-6 mx-auto" src={book.image} alt={book.bookName} />
                 </div>
